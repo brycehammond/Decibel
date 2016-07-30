@@ -7,21 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02328CBB1D4D39DD00EB5298 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02328CBA1D4D39DD00EB5298 /* AudioController.m */; };
+		02328CC11D4D3A3A00EB5298 /* SpeechRecognitionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 02328CC01D4D3A3A00EB5298 /* SpeechRecognitionService.m */; };
 		0290698B1D4D099300FDAE58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0290698A1D4D099300FDAE58 /* AppDelegate.swift */; };
-		0290698D1D4D099300FDAE58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0290698C1D4D099300FDAE58 /* ViewController.swift */; };
+		0290698D1D4D099300FDAE58 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0290698C1D4D099300FDAE58 /* RootViewController.swift */; };
 		029069901D4D099300FDAE58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0290698E1D4D099300FDAE58 /* Main.storyboard */; };
 		029069921D4D099300FDAE58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 029069911D4D099300FDAE58 /* Assets.xcassets */; };
 		029069951D4D099300FDAE58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029069931D4D099300FDAE58 /* LaunchScreen.storyboard */; };
+		0290699D1D4D0B7100FDAE58 /* libHoundSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290699C1D4D0B7100FDAE58 /* libHoundSDK.a */; };
+		029069A11D4D0B8400FDAE58 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290699E1D4D0B8400FDAE58 /* Accelerate.framework */; };
+		029069A21D4D0B8400FDAE58 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290699F1D4D0B8400FDAE58 /* AudioToolbox.framework */; };
+		029069A31D4D0B8400FDAE58 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029069A01D4D0B8400FDAE58 /* AVFoundation.framework */; };
+		029069A61D4D0B9B00FDAE58 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 029069A41D4D0B9B00FDAE58 /* libc++.tbd */; };
+		029069A71D4D0B9B00FDAE58 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 029069A51D4D0B9B00FDAE58 /* libz.tbd */; };
+		029069AF1D4D2B0700FDAE58 /* String+Decibel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029069AE1D4D2B0700FDAE58 /* String+Decibel.swift */; };
+		7FBD0EDAC600B23BE09A568C /* Pods_Decibel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFBB86854460A8F672A423C1 /* Pods_Decibel.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02328CB91D4D39DD00EB5298 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioController.h; path = Classes/AudioController.h; sourceTree = "<group>"; };
+		02328CBA1D4D39DD00EB5298 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioController.m; path = Classes/AudioController.m; sourceTree = "<group>"; };
+		02328CBF1D4D3A3A00EB5298 /* SpeechRecognitionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeechRecognitionService.h; path = Classes/SpeechRecognitionService.h; sourceTree = "<group>"; };
+		02328CC01D4D3A3A00EB5298 /* SpeechRecognitionService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeechRecognitionService.m; path = Classes/SpeechRecognitionService.m; sourceTree = "<group>"; };
 		029069871D4D099300FDAE58 /* Decibel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Decibel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0290698A1D4D099300FDAE58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0290698C1D4D099300FDAE58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0290698C1D4D099300FDAE58 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		0290698F1D4D099300FDAE58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		029069911D4D099300FDAE58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		029069941D4D099300FDAE58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		029069961D4D099300FDAE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0290699C1D4D0B7100FDAE58 /* libHoundSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHoundSDK.a; path = ../HoundSDK/libHoundSDK.a; sourceTree = "<group>"; };
+		0290699E1D4D0B8400FDAE58 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		0290699F1D4D0B8400FDAE58 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		029069A01D4D0B8400FDAE58 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		029069A41D4D0B9B00FDAE58 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		029069A51D4D0B9B00FDAE58 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		029069A91D4D188500FDAE58 /* Decibel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Decibel-Bridging-Header.h"; sourceTree = "<group>"; };
+		029069AE1D4D2B0700FDAE58 /* String+Decibel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Decibel.swift"; sourceTree = "<group>"; };
+		57C996D9BE467DD737BA9F7A /* Pods-Decibel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Decibel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Decibel/Pods-Decibel.debug.xcconfig"; sourceTree = "<group>"; };
+		BFBB86854460A8F672A423C1 /* Pods_Decibel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Decibel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9BECFE41E1C032BD088EEAE /* Pods-Decibel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Decibel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Decibel/Pods-Decibel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +54,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				029069A61D4D0B9B00FDAE58 /* libc++.tbd in Frameworks */,
+				029069A71D4D0B9B00FDAE58 /* libz.tbd in Frameworks */,
+				029069A11D4D0B8400FDAE58 /* Accelerate.framework in Frameworks */,
+				029069A21D4D0B8400FDAE58 /* AudioToolbox.framework in Frameworks */,
+				029069A31D4D0B8400FDAE58 /* AVFoundation.framework in Frameworks */,
+				0290699D1D4D0B7100FDAE58 /* libHoundSDK.a in Frameworks */,
+				7FBD0EDAC600B23BE09A568C /* Pods_Decibel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02328CB81D4D39AF00EB5298 /* Google Speech */ = {
+			isa = PBXGroup;
+			children = (
+				02328CB91D4D39DD00EB5298 /* AudioController.h */,
+				02328CBA1D4D39DD00EB5298 /* AudioController.m */,
+				02328CBF1D4D3A3A00EB5298 /* SpeechRecognitionService.h */,
+				02328CC01D4D3A3A00EB5298 /* SpeechRecognitionService.m */,
+			);
+			name = "Google Speech";
+			sourceTree = "<group>";
+		};
 		0290697E1D4D099300FDAE58 = {
 			isa = PBXGroup;
 			children = (
 				029069891D4D099300FDAE58 /* Decibel */,
 				029069881D4D099300FDAE58 /* Products */,
+				1F74107F2DA6F4C4F36E0F9D /* Pods */,
+				18B20BA2586C452B44DE0B93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +99,56 @@
 		029069891D4D099300FDAE58 /* Decibel */ = {
 			isa = PBXGroup;
 			children = (
+				02328CB81D4D39AF00EB5298 /* Google Speech */,
+				029069AD1D4D2AF800FDAE58 /* Extensions */,
 				0290698A1D4D099300FDAE58 /* AppDelegate.swift */,
-				0290698C1D4D099300FDAE58 /* ViewController.swift */,
+				0290698C1D4D099300FDAE58 /* RootViewController.swift */,
 				0290698E1D4D099300FDAE58 /* Main.storyboard */,
 				029069911D4D099300FDAE58 /* Assets.xcassets */,
 				029069931D4D099300FDAE58 /* LaunchScreen.storyboard */,
 				029069961D4D099300FDAE58 /* Info.plist */,
+				029069A81D4D0C4A00FDAE58 /* Frameworks */,
+				029069A91D4D188500FDAE58 /* Decibel-Bridging-Header.h */,
 			);
 			path = Decibel;
+			sourceTree = "<group>";
+		};
+		029069A81D4D0C4A00FDAE58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				029069A41D4D0B9B00FDAE58 /* libc++.tbd */,
+				029069A51D4D0B9B00FDAE58 /* libz.tbd */,
+				0290699E1D4D0B8400FDAE58 /* Accelerate.framework */,
+				0290699F1D4D0B8400FDAE58 /* AudioToolbox.framework */,
+				029069A01D4D0B8400FDAE58 /* AVFoundation.framework */,
+				0290699C1D4D0B7100FDAE58 /* libHoundSDK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		029069AD1D4D2AF800FDAE58 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				029069AE1D4D2B0700FDAE58 /* String+Decibel.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		18B20BA2586C452B44DE0B93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFBB86854460A8F672A423C1 /* Pods_Decibel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F74107F2DA6F4C4F36E0F9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57C996D9BE467DD737BA9F7A /* Pods-Decibel.debug.xcconfig */,
+				F9BECFE41E1C032BD088EEAE /* Pods-Decibel.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 029069991D4D099300FDAE58 /* Build configuration list for PBXNativeTarget "Decibel" */;
 			buildPhases = (
+				E84F3218171D9D08EF1153B0 /* [CP] Check Pods Manifest.lock */,
 				029069831D4D099300FDAE58 /* Sources */,
 				029069841D4D099300FDAE58 /* Frameworks */,
 				029069851D4D099300FDAE58 /* Resources */,
+				527D30CC5FB530CFD171057D /* [CP] Embed Pods Frameworks */,
+				7799984666D31010A53C5626 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +186,7 @@
 				TargetAttributes = {
 					029069861D4D099300FDAE58 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8MW535NRK9;
 					};
 				};
 			};
@@ -130,13 +221,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		527D30CC5FB530CFD171057D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Decibel/Pods-Decibel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7799984666D31010A53C5626 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Decibel/Pods-Decibel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E84F3218171D9D08EF1153B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		029069831D4D099300FDAE58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0290698D1D4D099300FDAE58 /* ViewController.swift in Sources */,
+				0290698D1D4D099300FDAE58 /* RootViewController.swift in Sources */,
 				0290698B1D4D099300FDAE58 /* AppDelegate.swift in Sources */,
+				02328CBB1D4D39DD00EB5298 /* AudioController.m in Sources */,
+				02328CC11D4D3A3A00EB5298 /* SpeechRecognitionService.m in Sources */,
+				029069AF1D4D2B0700FDAE58 /* String+Decibel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,23 +389,62 @@
 		};
 		0290699A1D4D099300FDAE58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57C996D9BE467DD737BA9F7A /* Pods-Decibel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					HoundSDK/include,
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public/!ProtoCompiler-gRPCPlugin\"",
+					"\"${PODS_ROOT}/Headers/Public/!ProtoCompiler\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Decibel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HoundSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fluidvisiondesign.Decibel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Decibel/Decibel-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		0290699B1D4D099300FDAE58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9BECFE41E1C032BD088EEAE /* Pods-Decibel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					HoundSDK/include,
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public/!ProtoCompiler-gRPCPlugin\"",
+					"\"${PODS_ROOT}/Headers/Public/!ProtoCompiler\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Decibel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HoundSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fluidvisiondesign.Decibel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Decibel/Decibel-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -286,6 +467,7 @@
 				0290699B1D4D099300FDAE58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

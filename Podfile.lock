@@ -1,0 +1,102 @@
+PODS:
+  - "!ProtoCompiler (3.0.0)":
+    - Protobuf (~> 3.0)
+  - "!ProtoCompiler-gRPCPlugin (1.0.0-pre1.2)":
+    - "!ProtoCompiler (= 3.0.0)"
+    - gRPC-ProtoRPC (= 1.0.0-pre1)
+  - Alamofire (3.4.1)
+  - AsyncSwift (1.7.3)
+  - BoringSSL (5.0):
+    - BoringSSL/Implementation (= 5.0)
+    - BoringSSL/Interface (= 5.0)
+  - BoringSSL/Implementation (5.0):
+    - BoringSSL/Interface (= 5.0)
+  - BoringSSL/Interface (5.0)
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
+  - Flurry-iOS-SDK/FlurrySDK (7.6.6)
+  - googleapis (0.0.1):
+    - "!ProtoCompiler-gRPCPlugin (~> 1.0.0-pre1.1)"
+    - googleapis/Messages (= 0.0.1)
+    - googleapis/Services (= 0.0.1)
+  - googleapis/Messages (0.0.1):
+    - "!ProtoCompiler-gRPCPlugin (~> 1.0.0-pre1.1)"
+    - Protobuf
+  - googleapis/Services (0.0.1):
+    - "!ProtoCompiler-gRPCPlugin (~> 1.0.0-pre1.1)"
+    - googleapis/Messages
+    - gRPC-ProtoRPC
+  - gRPC (1.0.0-pre1):
+    - gRPC-Core (= 1.0.0-pre1)
+    - gRPC-RxLibrary (= 1.0.0-pre1)
+  - gRPC-Core (1.0.0-pre1):
+    - gRPC-Core/Implementation (= 1.0.0-pre1)
+    - gRPC-Core/Interface (= 1.0.0-pre1)
+  - gRPC-Core/Implementation (1.0.0-pre1):
+    - BoringSSL (~> 5.0)
+    - gRPC-Core/Interface (= 1.0.0-pre1)
+  - gRPC-Core/Interface (1.0.0-pre1)
+  - gRPC-ProtoRPC (1.0.0-pre1):
+    - gRPC (= 1.0.0-pre1)
+    - gRPC-RxLibrary (= 1.0.0-pre1)
+    - Protobuf (~> 3.0.0-beta-3.1)
+  - gRPC-RxLibrary (1.0.0-pre1)
+  - HTTPStatusCodes (3.0.0)
+  - Protobuf (3.0.0)
+  - Reveal-iOS-SDK (1.6.2)
+  - SnapKit (0.21.1)
+  - SwiftyJSON (2.3.2)
+  - UIView-IMUUtilities (0.0.1):
+    - UIView-IMUUtilities/Swift (= 0.0.1)
+  - UIView-IMUUtilities/Core (0.0.1)
+  - UIView-IMUUtilities/Swift (0.0.1):
+    - UIView-IMUUtilities/Core
+
+DEPENDENCIES:
+  - Alamofire (~> 3.4.1)
+  - AsyncSwift (~> 1.7.3)
+  - ChameleonFramework/Swift (~> 2.1.0)
+  - Flurry-iOS-SDK/FlurrySDK (~> 7.6.6)
+  - googleapis (from `.`)
+  - HTTPStatusCodes (~> 3.0.0)
+  - Reveal-iOS-SDK
+  - SnapKit (~> 0.21.1)
+  - SwiftyJSON (~> 2.3.2)
+  - UIView-IMUUtilities (from `git@github.com:brycehammond/UIView-IMUUtilities.git`, commit `f311ef6e62950b569c2e3dd3ac0f1c2bb7acb611`)
+
+EXTERNAL SOURCES:
+  googleapis:
+    :path: "."
+  UIView-IMUUtilities:
+    :commit: f311ef6e62950b569c2e3dd3ac0f1c2bb7acb611
+    :git: git@github.com:brycehammond/UIView-IMUUtilities.git
+
+CHECKOUT OPTIONS:
+  UIView-IMUUtilities:
+    :commit: f311ef6e62950b569c2e3dd3ac0f1c2bb7acb611
+    :git: git@github.com:brycehammond/UIView-IMUUtilities.git
+
+SPEC CHECKSUMS:
+  "!ProtoCompiler": b2bedbd8cbdafca8f73c2c52abfcc1a5ce0f5ff7
+  "!ProtoCompiler-gRPCPlugin": fae5a7f4296d84a712c87d561aa07e8a4b75447f
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  AsyncSwift: f3ad5dd077bbd1477e7573e87071a532fedaca1a
+  BoringSSL: 92bfd6e0c0914dd4d898b5fc2fca01cf6dedebeb
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Flurry-iOS-SDK: 97bbeec09cca666c2f1772f6e161c4f8ccff611e
+  googleapis: 0b8d20676f3e3d45cdbe1ae10c28d921991e7682
+  gRPC: 68ce9f9f7453bf4ce18aeab0681aa3ff44401cae
+  gRPC-Core: 87a599cf81bd2534d74496198074a9fb09b3c1f8
+  gRPC-ProtoRPC: d7de5cfb271c2d047f3eace618c4ed3168cb60cf
+  gRPC-RxLibrary: d319234ca32e39a42de4aa3a06d4bd67640d3d4e
+  HTTPStatusCodes: 1e9e52c98b13646d255af4b495d934471b4a80d4
+  Protobuf: c032ce1bdf7a266acfd640fbfd8bdb166127c7f5
+  Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
+  SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  UIView-IMUUtilities: c428fbedce398fe9fcdad1c6613888c5a9b0d3b4
+
+PODFILE CHECKSUM: 149b4361421617e1cc5936e1d0d15b0aed559ea7
+
+COCOAPODS: 1.0.1
