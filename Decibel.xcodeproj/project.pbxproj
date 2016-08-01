@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02328CBB1D4D39DD00EB5298 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02328CBA1D4D39DD00EB5298 /* AudioController.m */; };
 		02328CC11D4D3A3A00EB5298 /* SpeechRecognitionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 02328CC01D4D3A3A00EB5298 /* SpeechRecognitionService.m */; };
+		02328CC41D4EB15700EB5298 /* GoogleSpeech.m in Sources */ = {isa = PBXBuildFile; fileRef = 02328CC31D4EB15700EB5298 /* GoogleSpeech.m */; };
 		0290698B1D4D099300FDAE58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0290698A1D4D099300FDAE58 /* AppDelegate.swift */; };
 		0290698D1D4D099300FDAE58 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0290698C1D4D099300FDAE58 /* RootViewController.swift */; };
 		029069901D4D099300FDAE58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0290698E1D4D099300FDAE58 /* Main.storyboard */; };
@@ -29,6 +30,8 @@
 		02328CBA1D4D39DD00EB5298 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioController.m; path = Classes/AudioController.m; sourceTree = "<group>"; };
 		02328CBF1D4D3A3A00EB5298 /* SpeechRecognitionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeechRecognitionService.h; path = Classes/SpeechRecognitionService.h; sourceTree = "<group>"; };
 		02328CC01D4D3A3A00EB5298 /* SpeechRecognitionService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeechRecognitionService.m; path = Classes/SpeechRecognitionService.m; sourceTree = "<group>"; };
+		02328CC21D4EB15700EB5298 /* GoogleSpeech.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoogleSpeech.h; path = Classes/GoogleSpeech.h; sourceTree = "<group>"; };
+		02328CC31D4EB15700EB5298 /* GoogleSpeech.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoogleSpeech.m; path = Classes/GoogleSpeech.m; sourceTree = "<group>"; };
 		029069871D4D099300FDAE58 /* Decibel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Decibel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0290698A1D4D099300FDAE58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0290698C1D4D099300FDAE58 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +77,8 @@
 				02328CBA1D4D39DD00EB5298 /* AudioController.m */,
 				02328CBF1D4D3A3A00EB5298 /* SpeechRecognitionService.h */,
 				02328CC01D4D3A3A00EB5298 /* SpeechRecognitionService.m */,
+				02328CC21D4EB15700EB5298 /* GoogleSpeech.h */,
+				02328CC31D4EB15700EB5298 /* GoogleSpeech.m */,
 			);
 			name = "Google Speech";
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02328CC41D4EB15700EB5298 /* GoogleSpeech.m in Sources */,
 				0290698D1D4D099300FDAE58 /* RootViewController.swift in Sources */,
 				0290698B1D4D099300FDAE58 /* AppDelegate.swift in Sources */,
 				02328CBB1D4D39DD00EB5298 /* AudioController.m in Sources */,

@@ -9,34 +9,56 @@
 import UIKit
 import Async
 import SwiftyJSON
+import AVFoundation
 
 class RootViewController: UIViewController {
     
     @IBOutlet weak var resultsView: UITextView!
     @IBOutlet weak var startStopButton: UIButton!
     
-    let voiceSearch: HoundVoiceSearch = HoundVoiceSearch.instance()
-    var listening = false
+    private enum VoiceRecognitionService {
+        case Google
+        case Hound
+    }
+    
+    private let voiceSearch: HoundVoiceSearch = HoundVoiceSearch.instance()
+    private var listening = false
+    private var recognitionService = VoiceRecognitionService.Hound
+    private var fullTranscription = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord)
     }
     
     //MARK: - IBAction
     
     @IBAction func startStopPressed(sender: UIButton) {
-        if sender.currentTitle == "Start" {
-            self.startHound()
+        
+        let startButtonTitle = "Start"
+        
+        if self.recognitionService == .Hound {
+            if sender.currentTitle == startButtonTitle {
+                self.startHound()
+            } else {
+                self.stopHound()
+            }
         } else {
-            self.stopHound()
+            if sender.currentTitle == startButtonTitle {
+                self.startGoogleSpeech()
+            } else {
+                self.stopGoogleSpeech()
+            }
         }
     }
     
     //MARK: - Transcription Handling
     
-    func handleTranscription(transcription: String) {
-        self.resultsView.text = transcription
+    func handleTranscription(transcription: String, isFinal: Bool = false) {
+        self.resultsView.text = self.fullTranscription + " " + transcription
+        if isFinal {
+            self.fullTranscription += " " + transcription
+        }
     }
 }
 
@@ -98,4 +120,17 @@ extension RootViewController {
         self.voiceSearch.stopListeningWithCompletionHandler({ (error) in
         })
     }
+}
+
+//MARK: - Google Speech
+
+extension RootViewController {
+    private func startGoogleSpeech() {
+        
+    }
+    
+    private func stopGoogleSpeech() {
+        
+    }
+
 }

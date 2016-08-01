@@ -4,3 +4,4 @@
 
 //Speech
 #import <HoundSDK/HoundSDK.h>
+#import "GoogleSpeech.h"
