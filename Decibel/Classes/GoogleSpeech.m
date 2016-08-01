@@ -22,9 +22,12 @@
 
 + (instancetype) sharedInstance {
     static GoogleSpeech *instance = nil;
-    if (!instance) {
-        instance = [[self alloc] init];
-    }
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        instance = [[GoogleSpeech alloc] init];
+    });
+    
     return instance;
 }
 
@@ -52,7 +55,7 @@
     for (int i = 0; i < frameCount; i++) {
         sum += abs(samples[i]);
     }
-    NSLog(@"audio %d %d", (int) frameCount, (int) (sum * 1.0 / frameCount));
+    //NSLog(@"audio %d %d", (int) frameCount, (int) (sum * 1.0 / frameCount));
     
     // We recommend sending samples in 100ms chunks
     int chunk_size = 0.1 /* seconds/chunk */ * SAMPLE_RATE * 2 /* bytes/sample */ ; /* bytes/chunk */
