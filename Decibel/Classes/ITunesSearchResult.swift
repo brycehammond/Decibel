@@ -12,10 +12,10 @@ import SwiftyJSON
 struct ITunesSearchResult {
 
     var artist = ""
-    var artworkURL = ""
+    var artworkURL: String?
     var trackName = ""
     var albumName = ""
-    var previewURL = ""
+    var previewURL: String?
     
     init(iTunesResponse: JSON) {
         if let artist = iTunesResponse["artistName"].string {

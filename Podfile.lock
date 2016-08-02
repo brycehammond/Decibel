@@ -45,6 +45,9 @@ PODS:
   - HTTPStatusCodes (3.0.0)
   - Protobuf (3.0.0)
   - Reveal-iOS-SDK (1.6.2)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
   - SnapKit (0.21.1)
   - SwiftyJSON (2.3.2)
   - UIView-IMUUtilities (0.0.1):
@@ -61,6 +64,7 @@ DEPENDENCIES:
   - googleapis (from `.`)
   - HTTPStatusCodes (~> 3.0.0)
   - Reveal-iOS-SDK
+  - SDWebImage (~> 3.8.1)
   - SnapKit (~> 0.21.1)
   - SwiftyJSON (~> 2.3.2)
   - UIView-IMUUtilities (from `git@github.com:brycehammond/UIView-IMUUtilities.git`, commit `f311ef6e62950b569c2e3dd3ac0f1c2bb7acb611`)
@@ -93,10 +97,11 @@ SPEC CHECKSUMS:
   HTTPStatusCodes: 1e9e52c98b13646d255af4b495d934471b4a80d4
   Protobuf: c032ce1bdf7a266acfd640fbfd8bdb166127c7f5
   Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   UIView-IMUUtilities: c428fbedce398fe9fcdad1c6613888c5a9b0d3b4
 
-PODFILE CHECKSUM: 149b4361421617e1cc5936e1d0d15b0aed559ea7
+PODFILE CHECKSUM: 79e28e4951e5dd10e2fbb6f371e228c2013c3dff
 
 COCOAPODS: 1.0.1

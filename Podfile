@@ -13,6 +13,7 @@ target 'Decibel' do
     pod 'UIView-IMUUtilities', :git => 'git@github.com:brycehammond/UIView-IMUUtilities.git', :commit => 'f311ef6e62950b569c2e3dd3ac0f1c2bb7acb611'
     pod 'Flurry-iOS-SDK/FlurrySDK', '~> 7.6.6'
     pod 'AsyncSwift', '~> 1.7.3'
+    pod 'SDWebImage', '~> 3.8.1'
     pod 'Reveal-iOS-SDK', :configurations => ['Debug']
     pod 'googleapis', :path => '.'
 end
