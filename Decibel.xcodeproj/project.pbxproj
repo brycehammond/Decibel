@@ -17,12 +17,6 @@
 		029069901D4D099300FDAE58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0290698E1D4D099300FDAE58 /* Main.storyboard */; };
 		029069921D4D099300FDAE58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 029069911D4D099300FDAE58 /* Assets.xcassets */; };
 		029069951D4D099300FDAE58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029069931D4D099300FDAE58 /* LaunchScreen.storyboard */; };
-		0290699D1D4D0B7100FDAE58 /* libHoundSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290699C1D4D0B7100FDAE58 /* libHoundSDK.a */; };
-		029069A11D4D0B8400FDAE58 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290699E1D4D0B8400FDAE58 /* Accelerate.framework */; };
-		029069A21D4D0B8400FDAE58 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290699F1D4D0B8400FDAE58 /* AudioToolbox.framework */; };
-		029069A31D4D0B8400FDAE58 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029069A01D4D0B8400FDAE58 /* AVFoundation.framework */; };
-		029069A61D4D0B9B00FDAE58 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 029069A41D4D0B9B00FDAE58 /* libc++.tbd */; };
-		029069A71D4D0B9B00FDAE58 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 029069A51D4D0B9B00FDAE58 /* libz.tbd */; };
 		029069AF1D4D2B0700FDAE58 /* String+Decibel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029069AE1D4D2B0700FDAE58 /* String+Decibel.swift */; };
 		7FBD0EDAC600B23BE09A568C /* Pods_Decibel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFBB86854460A8F672A423C1 /* Pods_Decibel.framework */; };
 /* End PBXBuildFile section */
@@ -43,12 +37,6 @@
 		029069911D4D099300FDAE58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		029069941D4D099300FDAE58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		029069961D4D099300FDAE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0290699C1D4D0B7100FDAE58 /* libHoundSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHoundSDK.a; path = ../HoundSDK/libHoundSDK.a; sourceTree = "<group>"; };
-		0290699E1D4D0B8400FDAE58 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		0290699F1D4D0B8400FDAE58 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		029069A01D4D0B8400FDAE58 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		029069A41D4D0B9B00FDAE58 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		029069A51D4D0B9B00FDAE58 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		029069A91D4D188500FDAE58 /* Decibel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Decibel-Bridging-Header.h"; sourceTree = "<group>"; };
 		029069AE1D4D2B0700FDAE58 /* String+Decibel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Decibel.swift"; sourceTree = "<group>"; };
 		57C996D9BE467DD737BA9F7A /* Pods-Decibel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Decibel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Decibel/Pods-Decibel.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,12 +49,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				029069A61D4D0B9B00FDAE58 /* libc++.tbd in Frameworks */,
-				029069A71D4D0B9B00FDAE58 /* libz.tbd in Frameworks */,
-				029069A11D4D0B8400FDAE58 /* Accelerate.framework in Frameworks */,
-				029069A21D4D0B8400FDAE58 /* AudioToolbox.framework in Frameworks */,
-				029069A31D4D0B8400FDAE58 /* AVFoundation.framework in Frameworks */,
-				0290699D1D4D0B7100FDAE58 /* libHoundSDK.a in Frameworks */,
 				7FBD0EDAC600B23BE09A568C /* Pods_Decibel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,12 +117,6 @@
 		029069A81D4D0C4A00FDAE58 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				029069A41D4D0B9B00FDAE58 /* libc++.tbd */,
-				029069A51D4D0B9B00FDAE58 /* libz.tbd */,
-				0290699E1D4D0B8400FDAE58 /* Accelerate.framework */,
-				0290699F1D4D0B8400FDAE58 /* AudioToolbox.framework */,
-				029069A01D4D0B8400FDAE58 /* AVFoundation.framework */,
-				0290699C1D4D0B7100FDAE58 /* libHoundSDK.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

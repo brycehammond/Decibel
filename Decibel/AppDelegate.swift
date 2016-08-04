@@ -15,8 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        Hound.setClientID("d7sBu6LbLf0nc7rHiEVlcA==")
-        Hound.setClientKey("__HsSVgVSFvUM9xaqQfr6sQ5_VtMd5vqnfZcaSKq6xro06sraNxUsOcQChSNcTXh-xoGR1AfBdc7cBsHG9Yamw==")
         return true
     }
 

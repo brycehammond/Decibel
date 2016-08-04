@@ -22,15 +22,8 @@ class RootViewController: UIViewController {
     @IBOutlet weak var trackLabel: UILabel!
     @IBOutlet weak var playPauseButton: UIButton!
     
-    private enum VoiceRecognitionService {
-        case Google
-        case Hound
-    }
-    
-    private let houndVoiceSearch = HoundVoiceSearch.instance()
     private let googleVoiceSearch = GoogleSpeech.sharedInstance()
     private var listening = false
-    private var recognitionService = VoiceRecognitionService.Hound
     private var fullTranscription = ""
     
     override func viewDidLoad() {
@@ -48,35 +41,11 @@ class RootViewController: UIViewController {
     @IBAction func startStopPressed(sender: UIButton) {
         
         let startButtonTitle = "Start"
-        
-        if self.recognitionService == .Hound {
-            if sender.currentTitle == startButtonTitle {
-                self.startHound()
-            } else {
-                self.stopHound()
-            }
+        if sender.currentTitle == startButtonTitle {
+            self.startGoogleSpeech()
         } else {
-            if sender.currentTitle == startButtonTitle {
-                self.startGoogleSpeech()
-            } else {
-                self.stopGoogleSpeech()
-            }
+            self.stopGoogleSpeech()
         }
-    }
-    
-    @IBAction func recognizerTypeChanged(sender: UISegmentedControl) {
-        
-        if self.startStopButton.currentTitle == "Stop" {
-            self.startStopPressed(self.startStopButton) //stop current recorder if present
-            self.resultsView.text = ""
-        }
-        
-        if sender.selectedSegmentIndex == 0 {
-            self.recognitionService = .Hound
-        } else {
-            self.recognitionService = .Google
-        }
-        
     }
     
     //MARK: - Transcription Handling
@@ -105,67 +74,6 @@ class RootViewController: UIViewController {
     private func songSearchTermInTranscription(transcription: String) -> String? {
         let matches = transcription.regexMatches("of is(.+?)is that right")
         return matches.first
-    }
-}
-
-//MARK: - Houndify
-
-extension RootViewController {
-    private func startHound() {
-        self.houndVoiceSearch.enableEndOfSpeechDetection = false
-        self.houndVoiceSearch.enableSpeech = false
-        self.houndVoiceSearch.enableHotPhraseDetection = false
-        self.startStopButton.setTitle("Stop", forState: .Normal)
-        self.resultsView.text = ""
-        self.fullTranscription = ""
-        self.houndVoiceSearch.startListeningWithCompletionHandler({ [weak self] (error) in
-            
-        if let strongSelf = self {
-            if (error != nil) {
-                
-            } else {
-                strongSelf.listening = true
-                strongSelf.houndVoiceSearch.startSearchWithRequestInfo([NSObject : AnyObject](), endPointURL: NSURL(string: "https://api.houndify.com/v1/audio"), responseHandler: { [weak self] (error, responseType, response, dictionary) in
-                    
-                    if let strongSelf = self {
-                        
-                        Async.main {
-                            
-                            if nil == error {
-                                if responseType == .PartialTranscription  {
-                                    if let partialTranscript = response as? HoundDataPartialTranscript {
-                                        if partialTranscript.partialTranscript.length > 0 {
-                                            strongSelf.handleTranscription(partialTranscript.partialTranscript)
-                                        }
-                                    }
-                                } else if responseType == .HoundServer {
-                                    if let houndServer = response as? HoundDataHoundServer {
-                                        
-                                        let commandResult = JSON(houndServer.allResults.firstObject()["NativeData"])
-                                        if let finalTranscript = commandResult["FormattedTranscription"].string {
-                                            strongSelf.handleTranscription(finalTranscript, isFinal: true)
-                                        }
-                                    }
-                                    
-                                    strongSelf.stopHound()
-                                }
-                            } else {
-                                //An error occured so handle appropriately
-                                strongSelf.stopHound()
-                            }
-                        }
-                    }
-                    })
-                }
-            }
-        })
-    }
-    
-    private func stopHound() {
-        self.startStopButton.setTitle("Start", forState: .Normal)
-        self.listening = false
-        self.houndVoiceSearch.stopListeningWithCompletionHandler({ (error) in
-        })
     }
 }
 

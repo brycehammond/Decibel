@@ -65,11 +65,9 @@
                                                     withCompletion:^(StreamingRecognizeResponse *response, NSError *error) {
                                                         if (response) {
                                                             BOOL finished = NO;
-                                                            NSLog(@"RESPONSE RECEIVED");
                                                             if (error) {
                                                                 NSLog(@"ERROR: %@", error);
                                                             } else {
-                                                                NSLog(@"RESPONSE: %@", response.resultsArray);
                                                                 for (StreamingRecognitionResult *result in response.resultsArray) {
                                                                     if (result.isFinal) {
                                                                         finished = YES;
