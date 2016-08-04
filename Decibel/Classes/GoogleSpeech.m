@@ -61,7 +61,6 @@
     int chunk_size = 0.1 /* seconds/chunk */ * SAMPLE_RATE * 2 /* bytes/sample */ ; /* bytes/chunk */
     
     if ([self.audioData length] > chunk_size) {
-        NSLog(@"SENDING");
         [[SpeechRecognitionService sharedInstance] streamAudioData:self.audioData
                                                     withCompletion:^(StreamingRecognizeResponse *response, NSError *error) {
                                                         if (response) {
@@ -70,14 +69,22 @@
                                                             if (error) {
                                                                 NSLog(@"ERROR: %@", error);
                                                             } else {
-                                                                NSLog(@"RESPONSE: %@", response);
+                                                                NSLog(@"RESPONSE: %@", response.resultsArray);
                                                                 for (StreamingRecognitionResult *result in response.resultsArray) {
                                                                     if (result.isFinal) {
                                                                         finished = YES;
                                                                     }
                                                                 }
                                                                 
-                                                                [self.delegate googleSpeechDidReceiveTranscript:@"" isFinal:finished];
+                                                                if(response.resultsArray.count > 0) {
+                                                                    if([response.resultsArray.firstObject isKindOfClass:[StreamingRecognitionResult class]]) {
+                                                                        StreamingRecognitionResult *result = (StreamingRecognitionResult *)response.resultsArray.firstObject;
+                                                                        SpeechRecognitionAlternative *topPrediction = result.alternativesArray.firstObject;
+                                                                        NSString *transcript = topPrediction.transcript;
+                                                                        NSLog(@"Result: %@ finished: %i", transcript, finished);
+                                                                        [self.delegate googleSpeechDidReceiveTranscript:transcript isFinal:finished];
+                                                                    }
+                                                                }
                                                             }
                                                         }
                                                     }];
