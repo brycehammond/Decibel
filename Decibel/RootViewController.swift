@@ -130,10 +130,17 @@ extension RootViewController : GoogleSpeechDelegate {
 extension RootViewController : AudioPlayerDelegate {
     func playerReady(player: AudioPlayer) {
         self.playPauseButton.hidden = false
+        
+        //Play then pause audio player so we become current playing app
+        player.playFromBeginning()
+        player.pause()
     }
     
     func playerPlaybackStateDidChange(player: AudioPlayer) {
-        
+        if player.playbackState == .Stopped {
+            player.seekToTime(kCMTimeZero)
+            self.playPauseButton.setTitle("Play", forState: .Normal)
+        }
     }
     
     func playerBufferingStateDidChange(player: AudioPlayer) {
