@@ -22,7 +22,7 @@ struct ITunesSearchResult {
             self.artist = artist
         }
         
-        if let artworkURL = iTunesResponse["artworkUrl100"].string {
+        if let artworkURL = iTunesResponse["artworkUrl60"].string {
             self.artworkURL = artworkURL
         }
         

@@ -23,6 +23,7 @@ class RootViewController: UIViewController {
     @IBOutlet weak var playPauseButton: UIButton!
     
     private let googleVoiceSearch = GoogleSpeech.sharedInstance()
+    private var audioPlayer: AudioPlayer?
     private var listening = false
     private var fullTranscription = ""
     
@@ -48,6 +49,32 @@ class RootViewController: UIViewController {
         }
     }
     
+    @IBAction func playPausePressed(sender: UIButton) {
+        
+        let playButtonTitle = "Play"
+        if sender.currentTitle == playButtonTitle {
+            self.audioPlayer?.playFromCurrentTime()
+            self.playPauseButton.setTitle("Pause", forState: .Normal)
+        } else {
+            self.audioPlayer?.pause()
+            self.playPauseButton.setTitle("Play", forState: .Normal)
+        }
+        
+    }
+    
+    //MARK: - Audio Handling
+    
+    private func loadSongForPlayback(song: ITunesSearchResult) {
+        
+        if let previewLocation = song.previewURL, let previewURL = NSURL(string: previewLocation) {
+            self.audioPlayer?.pause()
+            self.audioPlayer = AudioPlayer()
+            self.audioPlayer?.delegate = self
+            self.audioPlayer?.setUrl(previewURL)
+            self.playPauseButton.hidden = false
+        }
+    }
+    
     //MARK: - Transcription Handling
     
     private func handleTranscription(transcription: String, isFinal: Bool = false) {
@@ -66,6 +93,7 @@ class RootViewController: UIViewController {
                     if let artworkURL = song.artworkURL, let albumImageURL = NSURL(string: artworkURL) {
                         self.albumImageView.sd_setImageWithURL(albumImageURL)
                     }
+                    self.loadSongForPlayback(song)
                 }
             }
         }
@@ -97,4 +125,26 @@ extension RootViewController : GoogleSpeechDelegate {
         self.handleTranscription(transcript, isFinal: isFinal)
     }
     
+}
+
+extension RootViewController : AudioPlayerDelegate {
+    func playerReady(player: AudioPlayer) {
+        self.playPauseButton.hidden = false
+    }
+    
+    func playerPlaybackStateDidChange(player: AudioPlayer) {
+        
+    }
+    
+    func playerBufferingStateDidChange(player: AudioPlayer) {
+        
+    }
+    
+    func playerPlaybackWillStartFromBeginning(player: AudioPlayer) {
+        
+    }
+    
+    func playerPlaybackDidEnd(player: AudioPlayer) {
+        
+    }
 }

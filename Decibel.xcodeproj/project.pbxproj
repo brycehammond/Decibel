@@ -12,6 +12,7 @@
 		02328CC41D4EB15700EB5298 /* GoogleSpeech.m in Sources */ = {isa = PBXBuildFile; fileRef = 02328CC31D4EB15700EB5298 /* GoogleSpeech.m */; };
 		02328CC71D4EDAA900EB5298 /* ITunesSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02328CC61D4EDAA900EB5298 /* ITunesSearch.swift */; };
 		02328CC91D4EDE7F00EB5298 /* ITunesSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02328CC81D4EDE7F00EB5298 /* ITunesSearchResult.swift */; };
+		0247AE871D53A03000E82D5A /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0247AE861D53A03000E82D5A /* AudioPlayer.swift */; };
 		0290698B1D4D099300FDAE58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0290698A1D4D099300FDAE58 /* AppDelegate.swift */; };
 		0290698D1D4D099300FDAE58 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0290698C1D4D099300FDAE58 /* RootViewController.swift */; };
 		029069901D4D099300FDAE58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0290698E1D4D099300FDAE58 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		02328CC31D4EB15700EB5298 /* GoogleSpeech.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoogleSpeech.m; path = Classes/GoogleSpeech.m; sourceTree = "<group>"; };
 		02328CC61D4EDAA900EB5298 /* ITunesSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ITunesSearch.swift; path = Classes/ITunesSearch.swift; sourceTree = "<group>"; };
 		02328CC81D4EDE7F00EB5298 /* ITunesSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ITunesSearchResult.swift; path = Classes/ITunesSearchResult.swift; sourceTree = "<group>"; };
+		0247AE861D53A03000E82D5A /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioPlayer.swift; path = Classes/AudioPlayer.swift; sourceTree = "<group>"; };
 		029069871D4D099300FDAE58 /* Decibel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Decibel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0290698A1D4D099300FDAE58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0290698C1D4D099300FDAE58 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				029069AD1D4D2AF800FDAE58 /* Extensions */,
 				0290698A1D4D099300FDAE58 /* AppDelegate.swift */,
 				0290698C1D4D099300FDAE58 /* RootViewController.swift */,
+				0247AE861D53A03000E82D5A /* AudioPlayer.swift */,
 				0290698E1D4D099300FDAE58 /* Main.storyboard */,
 				029069911D4D099300FDAE58 /* Assets.xcassets */,
 				029069931D4D099300FDAE58 /* LaunchScreen.storyboard */,
@@ -271,6 +274,7 @@
 			files = (
 				02328CC91D4EDE7F00EB5298 /* ITunesSearchResult.swift in Sources */,
 				02328CC41D4EB15700EB5298 /* GoogleSpeech.m in Sources */,
+				0247AE871D53A03000E82D5A /* AudioPlayer.swift in Sources */,
 				0290698D1D4D099300FDAE58 /* RootViewController.swift in Sources */,
 				0290698B1D4D099300FDAE58 /* AppDelegate.swift in Sources */,
 				02328CC71D4EDAA900EB5298 /* ITunesSearch.swift in Sources */,
@@ -394,7 +398,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
-					HoundSDK/include,
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public/!ProtoCompiler-gRPCPlugin\"",
 					"\"${PODS_ROOT}/Headers/Public/!ProtoCompiler\"",
@@ -404,10 +407,7 @@
 				INFOPLIST_FILE = Decibel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/HoundSDK",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fluidvisiondesign.Decibel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -425,7 +425,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
-					HoundSDK/include,
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public/!ProtoCompiler-gRPCPlugin\"",
 					"\"${PODS_ROOT}/Headers/Public/!ProtoCompiler\"",
@@ -435,10 +434,7 @@
 				INFOPLIST_FILE = Decibel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/HoundSDK",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fluidvisiondesign.Decibel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
