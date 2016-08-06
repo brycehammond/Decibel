@@ -266,7 +266,7 @@ class AudioPlayer: NSObject {
         }
         
         self.playerItem = playerItem
-        
+    
         if self.playerItem != nil {
             self.playerItem?.addObserver(self, forKeyPath: PlayerEmptyBufferKey, options: ([NSKeyValueObservingOptions.New, NSKeyValueObservingOptions.Old]), context: &PlayerItemObserverContext)
             self.playerItem?.addObserver(self, forKeyPath: PlayerKeepUp, options: ([NSKeyValueObservingOptions.New, NSKeyValueObservingOptions.Old]), context: &PlayerItemObserverContext)
@@ -276,6 +276,10 @@ class AudioPlayer: NSObject {
             NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(playerItemFailedToPlayToEndTime(_:)), name: AVPlayerItemFailedToPlayToEndTimeNotification, object: self.playerItem)
         }
         
+        if let item = self.playerItem {
+            self.addFadeInOutToPlayerItem(item)
+        }
+        
         self.player.replaceCurrentItemWithPlayerItem(self.playerItem)
         
         if self.playbackLoops.boolValue == true {
@@ -283,6 +287,26 @@ class AudioPlayer: NSObject {
         } else {
             self.player.actionAtItemEnd = .Pause
         }
+    }
+    
+    private func addFadeInOutToPlayerItem(playerItem: AVPlayerItem) {
+        
+        var allAudioParams = [AVAudioMixInputParameters]()
+        for track in playerItem.asset.tracksWithMediaType(AVMediaTypeAudio) {
+
+            let fadeDuration = CMTimeMakeWithSeconds(2, 1)
+            let fadeOutStartTime = CMTimeMakeWithSeconds(CMTimeGetSeconds(playerItem.duration) - fadeDuration.seconds , 1)
+            let fadeInStartTime = CMTimeMakeWithSeconds(0, 1)
+            
+            let audioInputParams = AVMutableAudioMixInputParameters(track: track)
+            audioInputParams.setVolumeRampFromStartVolume(1.0, toEndVolume: 0, timeRange: CMTimeRangeMake(fadeOutStartTime, fadeDuration))
+            audioInputParams.setVolumeRampFromStartVolume(0.0, toEndVolume: 1.0, timeRange: CMTimeRangeMake(fadeInStartTime, fadeDuration))
+            allAudioParams.append(audioInputParams)
+        }
+        
+        let audioMix = AVMutableAudioMix()
+        audioMix.inputParameters = allAudioParams
+        playerItem.audioMix = audioMix
     }
     
     // MARK: NSNotifications

@@ -57,9 +57,9 @@ class RootViewController: UIViewController {
     @objc func playPause() {
         let playButtonTitle = "Play"
         if self.playPauseButton.currentTitle == playButtonTitle {
-            self.audioPlayer?.pause()
+            self.play()
         } else {
-            self.audioPlayer?.playFromCurrentTime()
+            self.pause()
         }
     }
     
@@ -83,7 +83,8 @@ class RootViewController: UIViewController {
     private func loadSongForPlayback(song: ITunesSearchResult) {
         
         if let previewLocation = song.previewURL, let previewURL = NSURL(string: previewLocation) {
-            self.audioPlayer?.pause()
+            self.stopGoogleSpeech()
+            self.stop()
             self.audioPlayer = AudioPlayer()
             self.audioPlayer?.delegate = self
             self.audioPlayer?.setUrl(previewURL)
@@ -116,7 +117,7 @@ class RootViewController: UIViewController {
     }
     
     private func songSearchTermInTranscription(transcription: String) -> String? {
-        let matches = transcription.regexMatches("of is(.+?)is that right")
+        let matches = transcription.regexMatches("of is(.+?)(about|is that) right")
         return matches.first
     }
 }
