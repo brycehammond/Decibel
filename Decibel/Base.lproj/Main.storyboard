@@ -45,10 +45,10 @@
                                     <action selector="startStopPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="def-1r-59g"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSt-V4-bEE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSt-V4-bEE">
                                 <rect key="frame" x="93" y="355" width="435" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="V8T-2A-J0d"/>
+                                    <constraint firstAttribute="height" priority="999" constant="21" id="V8T-2A-J0d"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,7 +61,7 @@
                                     <constraint firstAttribute="width" constant="110" id="NoI-BX-ShE"/>
                                     <constraint firstAttribute="height" constant="40" id="twv-os-1ZH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Play"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -72,19 +72,19 @@
                                     <action selector="playPausePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hlg-59-KRW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFZ-Qy-98A">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFZ-Qy-98A">
                                 <rect key="frame" x="93" y="295" width="435" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="NEe-4N-cFq"/>
+                                    <constraint firstAttribute="height" priority="999" constant="21" id="NEe-4N-cFq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9F-8w-j6U">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9F-8w-j6U">
                                 <rect key="frame" x="93" y="324" width="435" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="KhD-a2-CBI"/>
+                                    <constraint firstAttribute="height" priority="999" constant="21" id="KhD-a2-CBI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -101,12 +101,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aSt-V4-bEE" firstAttribute="trailing" secondItem="TFZ-Qy-98A" secondAttribute="trailing" id="7ZO-wg-R84"/>
-                            <constraint firstItem="oJ1-tg-Pjz" firstAttribute="top" secondItem="ADd-1Y-Bco" secondAttribute="bottom" constant="26" id="AYQ-vy-ILa"/>
                             <constraint firstItem="h4u-gr-gOi" firstAttribute="leading" secondItem="TFZ-Qy-98A" secondAttribute="trailing" constant="12" id="Bcp-eY-G2L"/>
                             <constraint firstItem="Q9F-8w-j6U" firstAttribute="trailing" secondItem="TFZ-Qy-98A" secondAttribute="trailing" id="Bzc-2j-5em"/>
                             <constraint firstItem="6Rq-tR-hx1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="CwS-Kd-VnQ"/>
                             <constraint firstItem="Q9F-8w-j6U" firstAttribute="leading" secondItem="TFZ-Qy-98A" secondAttribute="leading" id="F6K-aU-aDB"/>
                             <constraint firstItem="oJ1-tg-Pjz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GMg-Jv-SYR"/>
+                            <constraint firstItem="oJ1-tg-Pjz" firstAttribute="top" secondItem="aSt-V4-bEE" secondAttribute="bottom" constant="15" id="IGU-nk-pSR"/>
                             <constraint firstItem="Q9F-8w-j6U" firstAttribute="top" secondItem="TFZ-Qy-98A" secondAttribute="bottom" constant="8" id="MvH-z8-4MS"/>
                             <constraint firstItem="TFZ-Qy-98A" firstAttribute="centerY" secondItem="ADd-1Y-Bco" secondAttribute="centerY" constant="-29.5" id="QGT-tg-vib"/>
                             <constraint firstItem="Q9F-8w-j6U" firstAttribute="top" secondItem="TFZ-Qy-98A" secondAttribute="bottom" constant="8" id="QzX-4c-UOh"/>

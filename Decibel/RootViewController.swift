@@ -11,6 +11,7 @@ import Async
 import SwiftyJSON
 import AVFoundation
 import SDWebImage
+import MediaPlayer
 
 class RootViewController: UIViewController {
     
@@ -50,15 +51,30 @@ class RootViewController: UIViewController {
     }
     
     @IBAction func playPausePressed(sender: UIButton) {
-        
+        self.playPause()
+    }
+    
+    @objc func playPause() {
         let playButtonTitle = "Play"
-        if sender.currentTitle == playButtonTitle {
-            self.audioPlayer?.playFromCurrentTime()
-            self.playPauseButton.setTitle("Pause", forState: .Normal)
-        } else {
+        if self.playPauseButton.currentTitle == playButtonTitle {
             self.audioPlayer?.pause()
-            self.playPauseButton.setTitle("Play", forState: .Normal)
+        } else {
+            self.audioPlayer?.playFromCurrentTime()
         }
+    }
+    
+    @objc func play() {
+        self.audioPlayer?.playFromCurrentTime()
+        self.playPauseButton.setTitle("Pause", forState: .Normal)
+    }
+    
+    @objc func pause() {
+        self.audioPlayer?.pause()
+        self.playPauseButton.setTitle("Play", forState: .Normal)
+    }
+    
+    @objc func stop() {
+        self.audioPlayer?.stop()
         
     }
     
@@ -105,6 +121,35 @@ class RootViewController: UIViewController {
     }
 }
 
+//MARK: - Remote Control Events
+
+extension RootViewController {
+    
+    func registerRemoteHandlers() {
+        let commandCenter = MPRemoteCommandCenter.sharedCommandCenter()
+        
+        commandCenter.playCommand.addTarget(self, action: #selector(play))
+        commandCenter.stopCommand.addTarget(self, action: #selector(stop))
+        commandCenter.pauseCommand.addTarget(self, action: #selector(pause))
+        commandCenter.togglePlayPauseCommand.addTarget(self, action: #selector(playPause))
+        
+        //Disable all the commands we don't support
+        commandCenter.nextTrackCommand.enabled = false
+        commandCenter.previousTrackCommand.enabled = false
+        commandCenter.bookmarkCommand.enabled = false
+        commandCenter.changePlaybackRateCommand.enabled = false
+        commandCenter.seekForwardCommand.enabled = false
+        commandCenter.seekBackwardCommand.enabled = false
+        commandCenter.skipForwardCommand.enabled = false
+        commandCenter.skipBackwardCommand.enabled = false
+        commandCenter.ratingCommand.enabled = false
+        commandCenter.likeCommand.enabled = false
+        commandCenter.dislikeCommand.enabled = false
+        
+    }
+    
+}
+
 //MARK: - Google Speech
 
 extension RootViewController : GoogleSpeechDelegate {
@@ -126,6 +171,8 @@ extension RootViewController : GoogleSpeechDelegate {
     }
     
 }
+
+//MARK: - AudioPlayerDelegate
 
 extension RootViewController : AudioPlayerDelegate {
     func playerReady(player: AudioPlayer) {
@@ -152,6 +199,7 @@ extension RootViewController : AudioPlayerDelegate {
     }
     
     func playerPlaybackDidEnd(player: AudioPlayer) {
-        
+        player.seekToTime(kCMTimeZero)
+        self.playPauseButton.setTitle("Play", forState: .Normal)
     }
 }
